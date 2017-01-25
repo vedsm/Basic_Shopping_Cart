@@ -1,0 +1,22 @@
+<h1>product</h1>
+
+<button ng-click="openCatalog()">Catalog</button>
+<button ng-click="openCart()">Cart</button>
+
+<div>{{product.id}}</div>
+<div>{{product.title}}</div>
+
+
+<ul>
+	<li ng-repeat="variant in product.variants">
+		<div>{{variant.id}}</div>
+		<div>{{variant.title}}</div>
+
+		<button ng-click="addToCart(variant.id)">Add to Cart</button>
+	</li>
+</ul>
+
+
+
+<h3>for debugging purposes,ignore from here</h3>
+<pre>{{product|json}}<pre>
